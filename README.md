@@ -1,4 +1,4 @@
-# Função simples para formatação de CEP (Brasil)
+# Funções úteis para formatações comuns pt-br
 
 Instalação via npm:
 ```shell
