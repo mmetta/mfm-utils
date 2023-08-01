@@ -1,6 +1,6 @@
 {
   "name": "mfm-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Primeiro pacote de funções úteis publicado no npm.",
   "main": "index.js",
   "repository": {
