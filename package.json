@@ -1,0 +1,20 @@
+{
+  "name": "mfm-utils",
+  "version": "0.0.1",
+  "description": "Primeiro pacote de funções úteis publicado no npm.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmetta/mfm-utils.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "utils",
+    "cep",
+    "format"
+  ],
+  "author": "Mario F Metta",
+  "license": "ISC"
+}
