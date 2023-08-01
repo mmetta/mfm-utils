@@ -1,4 +1,4 @@
-# Funções úteis para formatações comuns pt-br
+# Funções úteis para formatações e ordenação comuns pt-br
 
 Instalação via npm:
 ```shell
@@ -7,7 +7,7 @@ npm i mfm-utils
 
 Importar funções:
 ```js
-const { formatCep, formatCpf } = require("mfm-utils")
+const { formatCep, formatCpf, orderPtBr } = require("mfm-utils")
 ```
 
 * **formatCep(value)**
@@ -24,7 +24,7 @@ const { formatCep, formatCpf } = require("mfm-utils")
 
 * **orderPtBr(list, campo)**
 
-  Enviando uma lista de objetos a ordenação será pelo parâmetro compo.
+  Enviando uma lista de objetos a ordenação será pelo parâmetro campo.
 
   Exemplo:
 
@@ -35,9 +35,8 @@ const { formatCep, formatCpf } = require("mfm-utils")
       { nome: 'Carlos', sobrenome: 'Miranda' }
   ]
 
-  lista2 = ['Mario', 'Fernando', 'Carlos']
-
   console.log(ordenarPtBr(lista1, 'nome'))
+  // retorno:
   //   [
   //     { nome: 'Carlos', sobrenome: 'Miranda' },
   //     { nome: 'Fernando', sobrenome: 'Silva' },
@@ -52,7 +51,10 @@ const { formatCep, formatCpf } = require("mfm-utils")
   Exemplo:
 
 ```js
+  lista2 = ['Mario', 'Fernando', 'Carlos']
+
   console.log(ordenarPtBr(lista2))
+  // retorno:
   //   [ 'Carlos', 'Fernando', 'Mario' ]
 ```
 

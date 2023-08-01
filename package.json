@@ -1,7 +1,7 @@
 {
   "name": "mfm-utils",
-  "version": "0.0.2",
-  "description": "Primeiro pacote de funções úteis publicado no npm.",
+  "version": "0.0.3",
+  "description": "Primeiro pacote de funções úteis publicado por mim no npm.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -13,7 +13,9 @@
   "keywords": [
     "utils",
     "cep",
+    "cpf",
     "format",
+    "formatar",
     "order",
     "sort",
     "ordenar",
@@ -21,6 +23,7 @@
     "português",
     "brasil",
     "pt",
+    "br",
     "pt-br",
     "ptbr"
   ],
