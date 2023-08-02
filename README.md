@@ -7,7 +7,7 @@ npm i mfm-utils
 
 Importar funções:
 ```js
-const { formatCep, formatCpf, orderPtBr } = require("mfm-utils")
+const { formatCep, formatCpf, orderPtBr, fDateSlash, fDateDash, fDateDashi } = require("mfm-utils")
 ```
 
 * **formatCep(value)**
@@ -59,4 +59,37 @@ const { formatCep, formatCpf, orderPtBr } = require("mfm-utils")
 ```
 
   **Importante: por tratar-se de ordenação (pt-br), palavras com os acentos (agudo, circunflexo e grave), o til, o apóstrofo e a cedilha serão tratadas adequadamente.**
+
+* **fDateSlash()**
+
+  Função para retornar data e hora atuais retornando 3 formatos usando barra "/" como separador:
+
+```js
+  const date = fDateSlash()
+  console.log(date[0]) // 02/08/2023
+  console.log(date[1]) // 02/08/2023 15:39
+  console.log(date[2]) // 02/08/2023 15:39:29
+```
+
+* **fDateDash()**
+
+  Função para retornar data e hora atuais retornando 3 formatos usando traço "-" como separador:
+
+```js
+  const date = fDateDash()
+  console.log(date[0]) // 02-08-2023
+  console.log(date[1]) // 02-08-2023 15:39
+  console.log(date[2]) // 02-08-2023 15:39:29
+```
+
+* **fDateDashi()**
+
+  Função para retornar data (invertida) e hora atuais retornando 3 formatos usando traço "-" como separador:
+
+```js
+  const date = fDateDashi()
+  console.log(date[0]) // 2023-08-02
+  console.log(date[1]) // 2023-08-02 15:39
+  console.log(date[2]) // 2023-08-02 15:39:29
+```
 

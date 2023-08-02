@@ -62,6 +62,55 @@ function formatCpf(value) {
 }
 
 
+function splitObj(obj, sep) {
+
+    let dia = obj.getDate().toString().padStart(2, '0')
+    let mes = (obj.getMonth() + 1).toString().padStart(2, '0')
+    let ano = obj.getFullYear()
+    let hor = obj.getHours().toString().padStart(2, '0')
+    let min = obj.getMinutes().toString().padStart(2, '0')
+    let seg = obj.getSeconds().toString().padStart(2, '0')
+
+    let format = {}
+
+    if (sep === "i") {
+        format = [
+            `${ano}-${mes}-${dia}`,
+            `${ano}-${mes}-${dia} ${hor}:${min}`,
+            `${ano}-${mes}-${dia} ${hor}:${min}:${seg}`
+        ]
+    } else {
+        format = [
+            `${dia}${sep}${mes}${sep}${ano}`,
+            `${dia}${sep}${mes}${sep}${ano} ${hor}:${min}`,
+            `${dia}${sep}${mes}${sep}${ano} ${hor}:${min}:${seg}`
+        ]
+    }
+    return format
+}
+
+
+function fDateSlash() {
+    let date = new Date()
+    const format = splitObj(date, "/")
+    return format
+}
+
+
+function fDateDash() {
+    let date = new Date()
+    const format = splitObj(date, "-")
+    return format
+}
+
+
+function fDateDashi() {
+    let date = new Date()
+    const format = splitObj(date, "i")
+    return format
+}
+
+
 module.exports = {
-    formatCep, formatCpf, orderPtBr
+    formatCep, formatCpf, orderPtBr, fDateSlash, fDateDash, fDateDashi
 }
