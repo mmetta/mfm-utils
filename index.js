@@ -1,23 +1,24 @@
 function orderPtBr(lista, col) {
-    let campo = col
-    if (!col) {
-        campo = 0
-    }
     const list = lista.sort((a, b) => {
-        a = a[campo].toUpperCase()
-        b = b[campo].toUpperCase()
-        a = a.replace(/[AÀÁÂÃÄÅ]/, 'A')
-        a = a.replace(/[EÈÉÊË]/, 'E')
-        a = a.replace(/[IÍ]/, 'I')
-        a = a.replace(/[OÓÔÕ]/, 'O')
-        a = a.replace(/[CÇ]/, 'C')
-        a = a.replace(/[UÚ]/, 'U')
-        b = b.replace(/[AÀÁÂÃÄÅ]/, 'A')
-        b = b.replace(/[EÈÉÊË]/, 'E')
-        b = b.replace(/[IÍ]/, 'I')
-        b = b.replace(/[OÓÔÕ]/, 'O')
-        b = b.replace(/[CÇ]/, 'C')
-        b = b.replace(/[UÚ]/, 'U')
+        if (col) {
+            a = a[campo].toUpperCase()
+            b = b[campo].toUpperCase()
+        } else {
+            a = a.toUpperCase()
+            b = b.toUpperCase()
+        }
+        a = a.replace(/[AÀÁÂÃÄÅ]/gi, 'A')
+        a = a.replace(/[EÈÉÊË]/gi, 'E')
+        a = a.replace(/[IÍ]/gi, 'I')
+        a = a.replace(/[OÓÔÕ]/gi, 'O')
+        a = a.replace(/[CÇ]/gi, 'C')
+        a = a.replace(/[UÚ]/gi, 'U')
+        b = b.replace(/[AÀÁÂÃÄÅ]/gi, 'A')
+        b = b.replace(/[EÈÉÊË]/gi, 'E')
+        b = b.replace(/[IÍ]/gi, 'I')
+        b = b.replace(/[OÓÔÕ]/gi, 'O')
+        b = b.replace(/[CÇ]/gi, 'C')
+        b = b.replace(/[UÚ]/gi, 'U')
         a.replace(/[^a-z0-9]/gi, '')
         b.replace(/[^a-z0-9]/gi, '')
         if (a > b) {
